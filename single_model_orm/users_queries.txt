@@ -1,0 +1,12 @@
+users.objects.create(first_name="Gandalf", last_name="Grey", email_address="thegraywizard@gmail.com", age=10000)
+users.objects.create(first_name="Bilbo", last_name="Baggins", email_address="shiresadventurer@gmail.com", age=128)
+users.objects.create(first_name="Frodo", last_name="Baggins", email_address="one2rulethem_all@gmail.com", age=50)
+users.objects.all()
+users.objects.last()
+users.objects.first()
+frodo = users.objects.get(id=3)
+frodo.last_name = "Pancakes"
+frodo.save()
+bilbo = users.objects.get(id=2)
+bilbo.delete()
+users.objects.all().order_by("first_name")
